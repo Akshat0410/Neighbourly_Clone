@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Neighbourly_Clone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="post">POST</string>
+    <string name="hello_fragment">Hello Fragment</string>
+    <string name="welcome_back_to_munnekollal">Welcome back to Munnekollal</string>
+    <string name="anupam">Anupam</string>
+    <string name="_4_days_ago">4 days ago</string>
+    <string name="bengaluru">Bengaluru</string>
+    <string name="textview">TextView</string>
+    <string name="new_delhi">New Delhi</string>
+    <string name="remove">Remove</string>
 </resources>
