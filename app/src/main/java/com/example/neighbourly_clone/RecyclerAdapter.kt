@@ -6,15 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.neighbourly_clone.Model.RecyclerData
-import com.example.neighbourly_clone.databinding.ActivityMainBinding.bind
 
-class RecyclerAdapter(context: Context,data :ArrayList<RecyclerData>): RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
+class RecyclerAdapter(context: Context, data: ArrayList<RecyclerData>, navigation: NavController): RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
+    private  val navController: NavController=navigation
       var data:ArrayList<RecyclerData> = data
       val maincontext:Context=context
+
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         var recyclerimage: ImageView = itemView.findViewById(R.id.recyclerimage)
@@ -32,6 +33,7 @@ class RecyclerAdapter(context: Context,data :ArrayList<RecyclerData>): RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+
         val inflater= LayoutInflater.from(parent.context).inflate(R.layout.recyclerdata,parent,false)
         return MyViewHolder(inflater)
 
@@ -42,7 +44,11 @@ class RecyclerAdapter(context: Context,data :ArrayList<RecyclerData>): RecyclerV
 
        holder.name.text=data[position].name
         holder.title.text=data[position].titleorquestion
-//        Glide.with(holder.itemView).load(data[position].mainimage).into(holder.profileimage)
+
+         holder.itemView.setOnClickListener {
+            navController.navigate(R.id.action_home2_to_postView)
+         }
+
 
     }
 

@@ -9,5 +9,24 @@
         android:id="@+id/home2"
         android:name="com.example.neighbourly_clone.Home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_postView"
+            app:destination="@id/postView" />
+    </fragment>
+    <fragment
+        android:id="@+id/postView"
+        android:name="com.example.neighbourly_clone.PostView"
+        android:label="fragment_post_view"
+        tools:layout="@layout/fragment_post_view" >
+        <action
+            android:id="@+id/action_postView_to_home22"
+            app:destination="@id/home2"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_exit"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/postView"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
