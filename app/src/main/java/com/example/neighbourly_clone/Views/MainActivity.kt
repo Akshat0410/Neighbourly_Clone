@@ -1,4 +1,4 @@
-package com.example.neighbourly_clone
+package com.example.neighbourly_clone.Views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.example.neighbourly_clone.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-   private  lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +20,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
 
-
     }
-
-
 
 
 }

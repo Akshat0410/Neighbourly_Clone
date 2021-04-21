@@ -11,4 +11,6 @@
     <string name="textview">TextView</string>
     <string name="new_delhi">New Delhi</string>
     <string name="remove">Remove</string>
+    <string name="_2_likes">2 likes</string>
+    <string name="comment">COMMENT</string>
 </resources>

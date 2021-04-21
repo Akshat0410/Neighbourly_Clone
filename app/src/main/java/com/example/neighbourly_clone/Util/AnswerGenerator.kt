@@ -1,9 +1,9 @@
 package com.example.neighbourly_clone.Util
 
+import com.example.neighbourly_clone.Model.Answer
 import com.example.neighbourly_clone.Model.RecyclerData
 
-class DataGenerator {
-
+class AnswerGenerator {
 
     val name = arrayListOf("Anupam", "Rohan", "Somesh", "Sohan", "Adi", "Abhi")
     val location = arrayListOf("New Delhi", "Goa", "Ranchi", "Deoghar", "Kolkata")
@@ -21,25 +21,21 @@ class DataGenerator {
         "Hello Everone to the world of Android Development"
     )
     val time = arrayListOf("5 days ago", "4 days ago", "6 days ago", "9 days ago", "10 days ago")
-    val answercount =
-        arrayListOf("10 answers", "20 answers", "45 answers", "3 answers", "0 answers", "4 answers")
 
-    fun GenerateData(): RecyclerData {
 
-        return RecyclerData(
+    fun GenerateAnswer(): Answer {
 
-            mainimage = url.random(),
-            image = url.random(),
-            name = name.random(),
-            timeago = time.random(),
-            location = location.random(),
-            titleorquestion = title.random(),
-            answercount = answercount.random(),
-            titleorimage = false
+        return Answer(
+            answer = title.random(),
+            answerimage = url.random(),
+            answername = name.random(),
+            answerdate = time.random(),
+            location = location.random()
+
         )
 
 
     }
-
-
 }
+
+
