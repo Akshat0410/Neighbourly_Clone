@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.Posting"
+    android:fitsSystemWindows="true"
+    android:background="#520C78"
+    android:padding="20dp">
+
+    <FrameLayout
+        android:id="@+id/postview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:minHeight="1000dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="30dp"
+                    android:src="@drawable/close"
+                    android:contentDescription="@string/close_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_do_you_want_to_post"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/purple_500"
+                    />
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/photo"
+                    android:textColor="@color/purple_200"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="40dp"
+                    app:drawableLeftCompat="@drawable/photo" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="50dp"
+                        android:background="?android:attr/listDivider"
+                        android:layout_margin="10dp"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/question"
+                    android:textColor="@color/purple_200"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="40dp"
+                    app:drawableLeftCompat="@drawable/question" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="50dp"
+                    android:background="?android:attr/listDivider"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/poll"
+                    android:textColor="@color/purple_200"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="40dp"
+                    app:drawableLeftCompat="@drawable/poll" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="50dp"
+                    android:background="?android:attr/listDivider"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/event"
+                    android:textColor="@color/purple_200"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="40dp"
+                    app:drawableLeftCompat="@drawable/event" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="50dp"
+                    android:background="?android:attr/listDivider"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/tip"
+                    android:textColor="@color/purple_200"
+                    android:drawableStart="@drawable/tip"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="40dp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

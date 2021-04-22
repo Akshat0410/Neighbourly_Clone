@@ -24,6 +24,8 @@ class DataGenerator {
     val answercount =
         arrayListOf("10 answers", "20 answers", "45 answers", "3 answers", "0 answers", "4 answers")
 
+    val answer= arrayListOf("Good Question","I dont agree to this completely","Its really a great place to work in","I didnt get your question")
+
     fun GenerateData(): RecyclerData {
 
         return RecyclerData(
@@ -35,7 +37,8 @@ class DataGenerator {
             location = location.random(),
             titleorquestion = title.random(),
             answercount = answercount.random(),
-            titleorimage = false
+            titleorimage = false,
+            answer = answer.random()
         )
 
 

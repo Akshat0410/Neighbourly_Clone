@@ -13,6 +13,13 @@
         <action
             android:id="@+id/action_home2_to_postView"
             app:destination="@id/postView" />
+        <action
+            android:id="@+id/action_home2_to_posting"
+            app:destination="@id/posting"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/home2"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/postView"
@@ -28,5 +35,14 @@
             app:popExitAnim="@anim/fragment_fade_exit"
             app:popUpTo="@id/postView"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/posting"
+        android:name="com.example.neighbourly_clone.Views.Posting"
+        android:label="fragment_posting"
+        tools:layout="@layout/fragment_posting" >
+        <action
+            android:id="@+id/action_posting_to_home2"
+            app:destination="@id/home2" />
     </fragment>
 </navigation>

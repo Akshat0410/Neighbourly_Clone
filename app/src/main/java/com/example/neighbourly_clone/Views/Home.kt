@@ -1,11 +1,10 @@
 package com.example.neighbourly_clone.Views
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.PopupWindow
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -49,16 +48,27 @@ class Home : Fragment() {
 
         binding.mapButton.setOnClickListener {
 
-            val window=PopupWindow(requireContext())
-            val view=layoutInflater.inflate(R.layout.locationpopup,null)
-            window.contentView=view
+            val builder = AlertDialog.Builder(requireContext())
+            val view = layoutInflater.inflate(R.layout.locationpopup, null)
+            builder.setView(view)
+            val dialog = builder.create()
 
-            window.showAsDropDown(binding.mapButton)
-          
+            val window = dialog.window!!
+            val wlp: WindowManager.LayoutParams = window.attributes
+            wlp.gravity = Gravity.TOP
+            wlp.flags = wlp.flags and WindowManager.LayoutParams.FLAG_DIM_BEHIND.inv()
+            window.attributes = wlp
+
+            dialog.show()
+
         }
-//        binding.root.setOnClickListener {
-//            window.dismiss()
-//        }
+
+        binding.post.setOnClickListener {
+            findNavController().navigate(R.id.action_home2_to_posting)
+        }
+
+
+
 
 
 

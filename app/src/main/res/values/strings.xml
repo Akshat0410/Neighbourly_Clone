@@ -13,4 +13,14 @@
     <string name="remove">Remove</string>
     <string name="_2_likes">2 likes</string>
     <string name="comment">COMMENT</string>
+    <string name="photo">Photo</string>
+    <string name="tip">Tip</string>
+    <string name="event">Event</string>
+    <string name="question">Question</string>
+    <string name="what_do_you_want_to_post">What do you want to post ?</string>
+    <string name="poll">Poll</string>
+    <string name="close_button">Close Button</string>
+    <string name="change_neighbourhood">Change Neighbourhood</string>
+    <string name="add_neighbourhood">Add Neighbourhood</string>
+    <string name="munnekollal">Munnekollal</string>
 </resources>

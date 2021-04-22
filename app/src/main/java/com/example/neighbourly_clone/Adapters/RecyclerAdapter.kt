@@ -30,9 +30,8 @@ class RecyclerAdapter(context: Context, data: ArrayList<RecyclerData>, navigatio
         var answername: TextView = itemView.findViewById(R.id.answername)
         var answerdate: TextView = itemView.findViewById(R.id.answerdate)
         var answerlocation: TextView = itemView.findViewById(R.id.answerlocation)
-
-        //        var firstanswer:= itemView.findViewById(R.id.firstanswer)
         var answercount: TextView = itemView.findViewById(R.id.answercount)
+        var questionanswer: TextView=itemView.findViewById(R.id.questionanswer)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -45,12 +44,17 @@ class RecyclerAdapter(context: Context, data: ArrayList<RecyclerData>, navigatio
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+         var index=position%3
+
+        if (index==0)
+            holder.recyclerimage.visibility=View.GONE
 
         holder.name.text = data[position].name
         holder.title.text = data[position].titleorquestion
         holder.answercount.text=data[position].answercount
         holder.timeago.text=data[position].timeago
         holder.profilelocation.text=data[position].location
+        holder.questionanswer.text=data[position].answer
 
         holder.itemView.setOnClickListener {
             navController.navigate(R.id.action_home2_to_postView)

@@ -5,7 +5,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Views.PostView"
+    android:fitsSystemWindows="true"
     android:background="#520C78"
+    app:layout_constraintCircleRadius="25dp"
+
+
     >
 
 
@@ -13,187 +17,202 @@
         android:id="@+id/mainview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="200dp"
         android:background="@drawable/rounded"
-        android:minHeight="400dp"
-        android:layout_margin="10dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        android:layout_marginVertical="20dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        >
 
 
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/bottoviewimage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/profilepic"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="@id/constraintview"
-                app:layout_constraintRight_toRightOf="@id/constraintview"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="centerCrop"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/recyclerprofile_image"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/profilepic"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bottoviewimage" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="2dp"
-                android:hint="@string/anupam"
-                app:layout_constraintLeft_toRightOf="@id/recyclerprofile_image"
-                app:layout_constraintTop_toTopOf="@+id/recyclerprofile_image" />
-
-            <TextView
-                android:id="@+id/timeago"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:hint="@string/_4_days_ago"
-                app:layout_constraintStart_toEndOf="@+id/name"
-                app:layout_constraintTop_toTopOf="@+id/name" />
-
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="11dp"
-                android:drawableLeft="@drawable/location"
-                android:hint="@string/bengaluru"
-                app:layout_constraintBottom_toBottomOf="@+id/recyclerprofile_image"
-                app:layout_constraintStart_toEndOf="@+id/recyclerprofile_image" />
-
-            <TextView
-                android:id="@+id/titleorquestion"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/textview"
-                android:textAlignment="center"
-                android:textColor="@color/purple_200"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.436"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerprofile_image" />
-
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-               android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="8dp"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/titleorquestion"
-                android:backgroundTint="@color/teal_200"/>
-            <TextView
-                android:id="@+id/save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/rating"
-                android:drawablePadding="6dp"
-                android:text="Save"
-                android:textColor="#8A80FF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/like"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-            <TextView
-                android:id="@+id/like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/like"
-                android:drawablePadding="6dp"
-                android:text="Like"
-                android:textColor="#8A80FF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/answer"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/save"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-            <TextView
-                android:id="@+id/answer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/answers"
-                android:drawablePadding="6dp"
-                android:text="Answer"
-                android:textColor="#8A80FF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/like"
-                app:layout_constraintTop_toBottomOf="@+id/divider"
-                android:background="@drawable/buttonbackground"/>
-
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginHorizontal="6dp"
-                android:layout_marginTop="8dp"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/save"
-                android:backgroundTint="@color/teal_200"/>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/answerrecycler"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="@id/constraintview"
-                app:layout_constraintRight_toRightOf="@id/constraintview"
-                app:layout_constraintTop_toBottomOf="@id/divider2"
-                android:layout_marginTop="5dp"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/comment"
-                app:layout_constraintLeft_toLeftOf="@id/constraintview"
-                app:layout_constraintRight_toRightOf="@id/constraintview"
-                app:layout_constraintTop_toBottomOf="@id/answerrecycler"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
 
 
 
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+
+                 >
+
+
+                  <ImageView
+                      android:id="@+id/bottoviewimage"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:src="@drawable/scenery"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:scaleType="centerCrop"
+                      android:layout_gravity="center"
+                      />
+                  <de.hdodenhof.circleimageview.CircleImageView
+                      android:id="@+id/recyclerprofile_image"
+                      android:layout_width="60dp"
+                      android:layout_height="60dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="6dp"
+                      android:scaleType="centerCrop"
+                      android:src="@drawable/profilepic"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/bottoviewimage" />
+
+                  <TextView
+                      android:id="@+id/name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="2dp"
+                      android:hint="@string/anupam"
+                      app:layout_constraintLeft_toRightOf="@id/recyclerprofile_image"
+                      app:layout_constraintTop_toTopOf="@+id/recyclerprofile_image" />
+
+                  <TextView
+                      android:id="@+id/timeago"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="36dp"
+                      android:hint="@string/_4_days_ago"
+                      app:layout_constraintStart_toEndOf="@+id/name"
+                      app:layout_constraintTop_toTopOf="@+id/name" />
+
+                  <TextView
+                      android:id="@+id/location"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="28dp"
+                      android:layout_marginTop="5dp"
+                      android:drawableLeft="@drawable/location"
+                      android:hint="@string/bengaluru"
+                      app:layout_constraintBottom_toBottomOf="@+id/recyclerprofile_image"
+                      app:layout_constraintStart_toEndOf="@+id/recyclerprofile_image" />
+
+                  <TextView
+                      android:id="@+id/titleorquestion"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:text="@string/textview"
+                      android:textAlignment="center"
+                      android:textColor="@color/purple_200"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.436"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/recyclerprofile_image" />
+
+                  <View
+                      android:id="@+id/divider"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginHorizontal="12dp"
+                      android:layout_marginTop="8dp"
+                      android:background="?android:attr/listDivider"
+                      android:backgroundTint="@color/teal_200"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/titleorquestion" />
+
+                  <TextView
+                      android:id="@+id/save"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:drawableLeft="@drawable/rating"
+                      android:drawablePadding="6dp"
+                      android:text="Save"
+                      android:textColor="#8A80FF"
+                      android:textSize="15sp"
+                      android:background="@drawable/buttonbackground"
+                      app:layout_constraintEnd_toStartOf="@+id/like"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                  <TextView
+                      android:id="@+id/like"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:drawableLeft="@drawable/like"
+                      android:drawablePadding="6dp"
+                      android:text="Like"
+                      android:textColor="#8A80FF"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toStartOf="@+id/answer"
+                      app:layout_constraintHorizontal_bias="0.5"
+                      app:layout_constraintStart_toEndOf="@+id/save"
+                      app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                  <TextView
+                      android:id="@+id/answer"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:background="@drawable/buttonbackground"
+                      android:drawableLeft="@drawable/answers"
+                      android:drawablePadding="6dp"
+                      android:text="Answer"
+                      android:textColor="#8A80FF"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.5"
+                      app:layout_constraintStart_toEndOf="@+id/like"
+                      app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                  <View
+                      android:id="@+id/divider2"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginHorizontal="6dp"
+                      android:layout_marginTop="8dp"
+                      android:background="?android:attr/listDivider"
+                      android:backgroundTint="@color/teal_200"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/save" />
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/answerrecycler"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                  <Button
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/comment"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/answerrecycler" />
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
 
 
 
 
     </FrameLayout>
-
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

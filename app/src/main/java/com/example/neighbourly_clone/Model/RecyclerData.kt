@@ -8,6 +8,6 @@ data class RecyclerData(
     var location: String = "",
     var titleorquestion: String = "",
     val titleorimage: Boolean = false,
-//    val answer:List<Answer>,
-    var answercount: String = ""
+    var answercount: String = "",
+    var answer: String = ""
 )

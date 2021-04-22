@@ -44,7 +44,9 @@ class PostView : Fragment() {
         BottomSheetBehavior.from(binding.mainview).apply {
             this.state = BottomSheetBehavior.STATE_EXPANDED
             isDraggable = true
-            peekHeight = 300
+            peekHeight = 200
+
+
         }
         bottomSheetBehavior.addBottomSheetCallback(object :
             BottomSheetBehavior.BottomSheetCallback() {
@@ -65,7 +67,6 @@ class PostView : Fragment() {
         answerrecycler.layoutManager = LinearLayoutManager(context)
         recycleradapter = Answeradpater(requireContext(), answerdata)
         answerrecycler.adapter = recycleradapter
-
 
 
 
